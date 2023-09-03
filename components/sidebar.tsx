@@ -1,40 +1,34 @@
-'use client';
+"use client";
 
-import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
     x: 0,
     y: 0,
-    w: '64px',
+    w: "64px",
   },
-  '/about': {
-    name: 'about',
+  "/about": {
+    name: "about",
     x: 64,
     y: 35,
-    w: '65px',
+    w: "65px",
   },
-  '/blog': {
-    name: 'blog',
+  "/blog": {
+    name: "projects",
     x: 127,
     y: 69,
-    w: '56px',
-  },
-  '/guestbook': {
-    name: 'guestbook',
-    x: 182,
-    y: 104,
-    w: '100px',
+    w: "80px",
   },
 };
 
 function Logo() {
   return (
-    <Link aria-label="Lee Robinson" href="/">
+    <Link aria-label="Gordon Ma" href="/">
       <motion.svg
         className="text-black dark:text-white h-[25px] md:h-[37px]"
         width="25"
@@ -54,22 +48,40 @@ function Logo() {
           }}
           transition={{
             duration: 0.5,
-            type: 'spring',
+            type: "spring",
             stiffness: 50,
           }}
-          d="M39 316V0"
+          d="M39 317V0H550 H200V90"
           stroke="currentColor"
-          strokeWidth={78}
+          strokeWidth={60}
+        />
+        <motion.path
+          initial={{
+            opacity: 0,
+            pathLength: 0,
+          }}
+          animate={{
+            opacity: 1,
+            pathLength: 1,
+          }}
+          transition={{
+            duration: 0.5,
+            type: "spring",
+            stiffness: 50,
+          }}
+          d="M500 175H130V225"
+          stroke="currentColor"
+          strokeWidth={35}
         />
         <motion.path
           initial={{ x: -200, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{
             duration: 0.5,
-            type: 'spring',
+            type: "spring",
             stiffness: 50,
           }}
-          d="M232 314.998H129.852L232 232.887V314.998Z"
+          d="M400 314.998H89.852L232 232.887V314.998Z"
           fill="currentColor"
         />
       </motion.svg>
@@ -78,9 +90,9 @@ function Logo() {
 }
 
 export default function Navbar() {
-  let pathname = usePathname() || '/';
-  if (pathname.includes('/blog/')) {
-    pathname = '/blog';
+  let pathname = usePathname() || "/";
+  if (pathname.includes("/blog/")) {
+    pathname = "/blog";
   }
 
   return (
@@ -108,7 +120,7 @@ export default function Navbar() {
                       width: navItems[pathname].w,
                     }}
                     transition={{
-                      type: 'spring',
+                      type: "spring",
                       stiffness: 350,
                       damping: 30,
                     }}
@@ -126,7 +138,7 @@ export default function Navbar() {
                       width: navItems[pathname].w,
                     }}
                     transition={{
-                      type: 'spring',
+                      type: "spring",
                       stiffness: 350,
                       damping: 30,
                     }}
@@ -143,10 +155,10 @@ export default function Navbar() {
                   key={path}
                   href={path}
                   className={clsx(
-                    'transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px]',
+                    "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 py-[5px] px-[10px]",
                     {
-                      'text-neutral-500': !isActive,
-                      'font-bold': isActive,
+                      "text-neutral-500": !isActive,
+                      "font-bold": isActive,
                     }
                   )}
                 >
