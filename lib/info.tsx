@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "../app/images/avatar.jpeg";
+import me from "../app/images/me.jpeg";
 import peace from "../app/images/peace.gif";
 
 export const name = () => {
