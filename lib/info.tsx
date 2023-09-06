@@ -43,9 +43,19 @@ export const bio = () => {
       <p className="mb-5">
         And, I'm currently <b>seeking 2024 Internships!</b>
       </p>
+      <p className="mb-5">
+        In my spare time, I love to challenge myself with mind-bending and
+        creative coding projects. I'm always eager to pickup new languages and tools to build even impactful software. Learn more about my work{" "}
+        <a href="/blog">
+          <span style={{ backgroundColor: "lightblue" }}>
+            <b>here</b>
+          </span>
+        </a>
+        .
+      </p>
       <p>
-        <b>'Work-life balance'</b> is at the heart of my identity, so during my
-        free time, you'll find me:
+        In addition, <b>'Work-life balance'</b> is at the heart of my identity,
+        so during my free time, you'll find me:
       </p>
       <ul>
         <li className="ml-3">&#10148; Picking up New Instruments 🎸</li>
