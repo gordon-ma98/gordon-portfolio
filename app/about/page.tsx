@@ -22,7 +22,6 @@ const cardStyle: CSSProperties = {
   boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
   width: "300px",
   margin: "5px",
-  backgroundColor: "#fff",
 };
 
 const imageStyle: CSSProperties = {
