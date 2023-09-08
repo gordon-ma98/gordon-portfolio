@@ -18,7 +18,7 @@ const navItems = {
     y: 35,
     w: "65px",
   },
-  "/blog": {
+  "/projects": {
     name: "Projects",
     x: 127,
     y: 69,

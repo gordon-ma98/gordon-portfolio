@@ -46,7 +46,7 @@ export const bio = () => {
       <p className="mb-5">
         In my spare time, I love to challenge myself with mind-bending and
         creative coding projects. I'm always eager to pickup new languages and tools to build even impactful software. Learn more about my work{" "}
-        <a href="/blog">
+        <a href="/projects">
           <span style={{ backgroundColor: "lightblue" }}>
             <b>here</b>
           </span>
