@@ -9,6 +9,7 @@ import {
   ViewsIcon,
 } from 'components/icons';
 import { name, about, bio, avatar } from 'lib/info';
+import Footer from './footer';
 
 export const revalidate = 60;
 
@@ -78,6 +79,7 @@ export default async function HomePage() {
           </a>
         </li>
       </ul>
+      <Footer/>
     </section>
   );
 }

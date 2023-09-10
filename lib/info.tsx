@@ -2,6 +2,10 @@ import Image from "next/image";
 import me from "../app/images/me.jpeg";
 import peace from "../app/images/peace.gif";
 
+const textWithBorderStyle = {
+  border: "2px solid red",
+};
+
 export const name = () => {
   return (
     <div className="flex items-center">
@@ -47,11 +51,10 @@ export const bio = () => {
         In my spare time, I love to challenge myself with mind-bending and
         creative coding projects. I'm always eager to pickup new languages and tools to build even impactful software. Learn more about my work{" "}
         <a href="/projects">
-          <span style={{ backgroundColor: "lightblue" }}>
-            <b>here</b>
+          <span style={textWithBorderStyle}>
+            <b>here.</b>
           </span>
         </a>
-        .
       </p>
       <p>
         In addition, <b>'Work-life balance'</b> is at the heart of my identity,
@@ -68,18 +71,17 @@ export const bio = () => {
       <p className="mb-5">
         You'll find more about my interests and hobbies{" "}
         <a href="/about">
-          <span style={{ backgroundColor: "lightblue" }}>
-            <b>here</b>
+          <span style={textWithBorderStyle}>
+            <b>here.</b>
           </span>
         </a>
-        .
       </p>
       <p>
         I'm constantly delighted to meet new individuals and learn about
         thrilling possibilities!{" "}
         <b>
           <a href="mailto:g27ma@Uwaterloo.ca">
-            <span style={{ backgroundColor: "lightblue" }}>Let's Connect.</span>
+            <span style={textWithBorderStyle}>Let's Connect.</span>
           </a>
         </b>
       </p>

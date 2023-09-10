@@ -4,6 +4,7 @@ import coke from "../images/coke.jpeg";
 import rcm from "../images/rcm.jpeg";
 import tottenham from "../images/tottenham.jpeg";
 import meal from "../images/meal.jpeg"
+import Footer from "../footer"
 import { CSSProperties } from 'react';
 
 const cardContainerStyle = {
@@ -105,6 +106,7 @@ export default function AboutPage() {
           <Image src={meal} alt="meal" style={imageStyle} />
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
