@@ -14,13 +14,13 @@ const navItems = {
   },
   "/about": {
     name: "About",
-    x: 64,
+    x: 69,
     y: 35,
     w: "65px",
   },
   "/projects": {
     name: "Projects",
-    x: 127,
+    x: 137,
     y: 69,
     w: "80px",
   },
@@ -51,8 +51,9 @@ function Logo() {
             type: "spring",
             stiffness: 50,
           }}
-          d="M39 317V0H550 H200V90"
+          d="M39 317V0H550 H235V110"
           stroke="currentColor"
+          stroke-width="30"
           strokeWidth={60}
         />
         <motion.path
@@ -69,7 +70,7 @@ function Logo() {
             type: "spring",
             stiffness: 50,
           }}
-          d="M500 175H130V225"
+          d="M400 175H130V225"
           stroke="currentColor"
           strokeWidth={35}
         />
@@ -81,7 +82,7 @@ function Logo() {
             type: "spring",
             stiffness: 50,
           }}
-          d="M400 314.998H89.852L232 232.887V314.998Z"
+          d="M400 314.998H89.852L300 232.887V314.998Z"
           fill="currentColor"
         />
       </motion.svg>

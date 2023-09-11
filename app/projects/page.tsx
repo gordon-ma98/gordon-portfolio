@@ -11,31 +11,22 @@ import ViewCounter from "./view-counter";
 import chess from "../images/chess.png";
 import sudoku from "../images/sudoku.png";
 import carCreator from "../images/carCreator.png";
+import superchargers from "../images/superchargers.png";
 
-const keyframesStyles = `
-  @keyframes pop {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
+const styles = `
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
   }
+  .images {
+    margin-bottom: 10px
+  }
+}
 `;
-
-const cardContainerStyle = {
-  display: "flex",
-  justifyContent: "space-evenly",
-  maxWidth: "95%",
-  marginBottom: "30px",
-};
 
 const cardStyle: CSSProperties = {
   display: "flex",
-  flexDirection: "row",
   border: "1px solid #ddd",
   borderRadius: "4px",
   overflow: "hidden",
@@ -48,9 +39,8 @@ const cardStyle: CSSProperties = {
 const imageStyle: CSSProperties = {
   minWidth: "60%",
   maxWidth: "60%",
-  height: "420px",
   padding: "10px",
-  objectFit: "contain",
+  objectFit: "cover",
   border: "1px solid #ccc",
 };
 
@@ -164,6 +154,121 @@ export default function BlogPage() {
       </p>
       <div>
         <div
+          className="cards"
+          style={isHovered2 ? { ...cardStyle, ...popAnimation } : cardStyle}
+          onMouseEnter={handleMouseEnter2}
+          onMouseLeave={handleMouseLeave2}
+          onClick={() =>
+            (window.location.href =
+              "https://github.com/gordon-ma98/car-creator")
+          }
+        >
+          <div style={cardContentStyle}>
+            <h2 style={titleStyle}>Car Creator</h2>
+            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
+            🔧 :
+            <div style={boxStyles}>
+              <h5>JavaScript</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>OpenAI</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>Prompt Engineering</h5>
+            </div>
+            <hr style={{ marginTop: "10px" }}></hr>
+            <p style={descriptionStyle}>
+              A novel app emerges as a groundbreaking innovation, empowering
+              users to effortlessly transform automotive-themed phrases into
+              vivid, imaginative car designs. This remarkable application
+              harnesses the prowess of cutting-edge artificial intelligence and {" "}
+              <b>machine learning technologies</b> by seamlessly implementing advanced{" "}
+              <b>prompt engineering</b> techniques. Furthermore, it utilizes the
+              rich capabilities of the OpenAI Library to craft intricate and
+              imaginative vehicle concepts.
+            </p>
+          </div>
+          <Image
+            className="images"
+            src={carCreator}
+            alt="carCreator"
+            style={imageStyle}
+          />
+        </div>
+        <a
+          href="mailto:g27ma@Uwaterloo.ca?subject=Requesting%20Source%20Code%20for%20AI%20Chess%20Bot"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          <div
+            className="cards"
+            style={isHovered3 ? { ...cardStyle, ...popAnimation } : cardStyle}
+            onMouseEnter={handleMouseEnter3}
+            onMouseLeave={handleMouseLeave3}
+          >
+            <div style={cardContentStyle}>
+              <h2 style={titleStyle}>AI Chess Bot</h2>
+              <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
+              🔧 :
+              <div style={boxStyles}>
+                <h5>C++</h5>
+              </div>
+              <div style={boxStyles}>
+                <h5>X Window System</h5>
+              </div>
+              <hr style={{ marginTop: "10px" }}></hr>
+              <p style={descriptionStyle}>
+                An automated chess engine which has been designed using software
+                design patterns, featuring a GUI in the X Window System. It
+                allows users to play chess against{" "}
+                <b>four different levels of artificial intelligence</b>, ranging
+                from random legal moves at Level 1 to a more strategic approach
+                at Level 4, considering capturing moves, checks, and avoidance
+                of capture in its decision-making process.
+              </p>
+            </div>
+            <Image
+              className="images"
+              src={chess}
+              alt="chess"
+              style={imageStyle}
+            />
+          </div>
+        </a>
+        <div
+          className="cards"
+          style={isHovered4 ? { ...cardStyle, ...popAnimation } : cardStyle}
+          onMouseEnter={handleMouseEnter4}
+          onMouseLeave={handleMouseLeave4}
+          onClick={() =>
+            (window.location.href =
+              "https://github.com/gordon-ma98/sudoku-solver.git")
+          }
+        >
+          <div style={cardContentStyle}>
+            <h2 style={titleStyle}>Sudoku Solver</h2>
+            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
+            🔧 :
+            <div style={boxStyles}>
+              <h5>Python</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>PyGame</h5>
+            </div>
+            <hr style={{ marginTop: "10px" }}></hr>
+            <p style={descriptionStyle}>
+            The interactive Sudoku game board offers a user-friendly interface for number input and real-time feedback, enhancing the overall gaming experience. It incorporates a powerful solving engine that utilizes <b>dynamic programming principles</b> and the "backtracking algorithm" to efficiently crack even the most complex Sudoku puzzles. 
+            </p>
+            <p style={descriptionStyle}>Whether you're a casual player or a Sudoku aficionado, this interface provides a satisfying and educational puzzle-solving experience.</p>
+          </div>
+          <Image
+            className="images"
+            src={sudoku}
+            alt="sudoku"
+            style={imageStyle}
+          />
+        </div>
+        <div
+          className="cards"
           style={isHovered1 ? { ...cardStyle, ...popAnimation } : cardStyle}
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
@@ -175,6 +280,7 @@ export default function BlogPage() {
           <div style={cardContentStyle}>
             <h2 style={titleStyle}>Supercharger API</h2>
             <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
+            🔧 :
             <div style={boxStyles}>
               <h5>MongoDB</h5>
             </div>
@@ -197,100 +303,18 @@ export default function BlogPage() {
               was utilized to set up database schemas and Passport.js was
               incorporated for secure authentication middleware.
             </p>
+            <p style={descriptionStyle}>This project is on my <b>upcoming agenda</b>, aiming to enable users to easily navigate a map and locate their preferred <i>Tesla Supercharger</i> station as they scroll through the interface.</p>
           </div>
-          <Image src={chess} alt="chess" style={imageStyle} />
-        </div>
-        <div
-          style={isHovered2 ? { ...cardStyle, ...popAnimation } : cardStyle}
-          onMouseEnter={handleMouseEnter2}
-          onMouseLeave={handleMouseLeave2}
-          onClick={() =>
-            (window.location.href =
-              "https://github.com/gordon-ma98/car-creator")
-          }
-        >
-          <div style={cardContentStyle}>
-            <h2 style={titleStyle}>Car Creator</h2>
-            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
-            <div style={boxStyles}>
-              <h5>JavaScript</h5>
-            </div>
-            <div style={boxStyles}>
-              <h5>OpenAI</h5>
-            </div>
-            <div style={boxStyles}>
-              <h5>Prompt Engineering</h5>
-            </div>
-            <hr style={{ marginTop: "10px" }}></hr>
-            <p style={descriptionStyle}>
-              A novel app which enables uses to input automotive-themed phrases
-              seamlessly transmutes these textual inputs into fictional car
-              designs. The app leverages <b>prompt engineering</b> techniques
-              and harnesses the capabilities of the OpenAI Library.
-            </p>
-          </div>
-          <Image src={carCreator} alt="carCreator" style={imageStyle} />
-        </div>
-        <a href="mailto:g27ma@Uwaterloo.ca?subject=Requesting%20Source%20Code%20for%20AI%20Chess%20Bot" style={{ textDecoration: 'none', color: 'inherit' }}>
-        <div
-          style={isHovered3 ? { ...cardStyle, ...popAnimation } : cardStyle}
-          onMouseEnter={handleMouseEnter3}
-          onMouseLeave={handleMouseLeave3}
-        >
-          <div style={cardContentStyle}>
-            <h2 style={titleStyle}>AI Chess Bot</h2>
-            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
-            <div style={boxStyles}>
-              <h5>C++</h5>
-            </div>
-            <div style={boxStyles}>
-              <h5>X Window System</h5>
-            </div>
-            <hr style={{ marginTop: "10px" }}></hr>
-            <p style={descriptionStyle}>
-              An automated chess engine which has been designed using software
-              design patterns, featuring a GUI in the X Window System. It allows
-              users to play chess against{" "}
-              <b>four different levels of artificial intelligence</b>, ranging
-              from random legal moves at Level 1 to a more strategic approach at
-              Level 4, considering capturing moves, checks, and avoidance of
-              capture in its decision-making process.
-            </p>
-          </div>
-          <Image src={chess} alt="chess" style={imageStyle} />
-        </div>
-        </a>
-        <div
-          style={isHovered4 ? { ...cardStyle, ...popAnimation } : cardStyle}
-          onMouseEnter={handleMouseEnter4}
-          onMouseLeave={handleMouseLeave4}
-          onClick={() =>
-            (window.location.href =
-              "https://github.com/gordon-ma98/sudoku-solver.git")
-          }
-        >
-          <div style={cardContentStyle}>
-            <h2 style={titleStyle}>Sudoku Solver</h2>
-            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
-            <div style={boxStyles}>
-              <h5>Python</h5>
-            </div>
-            <div style={boxStyles}>
-              <h5>PyGame</h5>
-            </div>
-            <hr style={{ marginTop: "10px" }}></hr>
-            <p style={descriptionStyle}>
-              An interactive Sudoku game board interface that allows users to
-              input numbers and receive real-time feedback. In addition, the
-              interface features an efficient solver based on{" "}
-              <b>dynamic programming principles</b> and the "backtracking
-              algorithm".
-            </p>
-          </div>
-          <Image src={sudoku} alt="sudoku" style={imageStyle} />
+          <Image
+            className="images"
+            src={superchargers}
+            alt="superchargers"
+            style={imageStyle}
+          />
         </div>
       </div>
       <Footer />
+      <style>{styles}</style>
     </section>
   );
 }

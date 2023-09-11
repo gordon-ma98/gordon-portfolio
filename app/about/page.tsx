@@ -7,11 +7,21 @@ import meal from "../images/meal.jpeg"
 import Footer from "../footer"
 import { CSSProperties } from 'react';
 
+const styles = `
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+}
+`;
+
 const cardContainerStyle = {
   display: "flex",
   justifyContent: "space-evenly",
   maxWidth: "95%",
-  marginBottom: "30px",
+  marginBottom: "5px",
 };
 
 const cardStyle: CSSProperties = {
@@ -56,7 +66,7 @@ export default function AboutPage() {
         Since you've taken that extra click, I'd like to reward you by sharing
         some of my unique interests.
       </p>
-      <div style={cardContainerStyle}>
+      <div className="cards" style={cardContainerStyle}>
         <div style={cardStyle}>
           <div style={cardContentStyle}>
             <h2 style={titleStyle}>Coca-Cola</h2>
@@ -80,7 +90,7 @@ export default function AboutPage() {
           <Image src={rcm} alt="rcm" style={imageStyle} />
         </div>
       </div>
-      <div style={cardContainerStyle}>
+      <div className="cards" style={cardContainerStyle}>
         <div style={cardStyle}>
           <div style={cardContentStyle}>
             <h2 style={titleStyle}>Tottenham Hotspur F.C.</h2>
@@ -107,6 +117,7 @@ export default function AboutPage() {
         </div>
       </div>
       <Footer />
+      <style>{styles}</style>
     </section>
   );
 }
