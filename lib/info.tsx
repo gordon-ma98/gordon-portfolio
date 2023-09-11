@@ -4,6 +4,8 @@ import peace from "../app/images/peace.gif";
 
 const textWithBorderStyle = {
   border: "2px solid red",
+  padding: "2px",
+  borderRadius: "5px"
 };
 
 export const name = () => {
@@ -56,6 +58,7 @@ export const bio = () => {
           </span>
         </a>
       </p>
+      <hr style={{marginBottom: "10px"}}/>
       <p>
         In addition, <b>'Work-life balance'</b> is at the heart of my identity,
         so during my free time, you'll find me:
