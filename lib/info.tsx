@@ -58,7 +58,6 @@ export const bio = () => {
           </span>
         </a>
       </p>
-      <hr style={{marginBottom: "10px"}}/>
       <p>
         In addition, <b>'Work-life balance'</b> is at the heart of my identity,
         so during my free time, you'll find me:
