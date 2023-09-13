@@ -72,7 +72,7 @@ export default async function HomePage() {
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://www.linkedin.com/in/gord-ma/"
+            href="https://drive.google.com/file/d/1WN3TbBIshNL3jYXFX6QGHS4V7qbqxcFv/view?usp=sharing"
           >
             <ArrowIcon />
             <p className="h-7">see my resume</p>

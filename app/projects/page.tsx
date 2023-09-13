@@ -182,7 +182,7 @@ export default function BlogPage() {
               users to effortlessly transform automotive-themed phrases into
               vivid, imaginative car designs. This remarkable application
               harnesses the prowess of cutting-edge artificial intelligence and {" "}
-              <b>machine learning technologies</b> by seamlessly implementing advanced{" "}
+              <b>machine learning NLP technologies</b> by seamlessly implementing advanced{" "}
               <b>prompt engineering</b> techniques. Furthermore, it utilizes the
               rich capabilities of the OpenAI Library to craft intricate and
               imaginative vehicle concepts.
