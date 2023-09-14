@@ -2,6 +2,13 @@ import Image from "next/image";
 import me from "../app/images/me.jpeg";
 import peace from "../app/images/peace.gif";
 
+const styles = `
+.company:hover b {
+  color: red;
+  cursor: pointer;
+}
+`;
+
 const textWithBorderStyle = {
   border: "2px solid red",
   padding: "2px",
@@ -26,7 +33,7 @@ export const about = () => {
     <>
       I'm in my third year of Computer Science at the{" "}
       <b>University of Waterloo</b> and recently completed an internship at{" "}
-      <b>Marketing Kitchen</b> where I developed automation projects from
+      <span className="company"><a href="https://www.marketingkitchen.ca/"><b>Marketing Kitchen</b></a></span> where I developed automation projects from
       inception to completion.
     </>
   );
@@ -37,13 +44,13 @@ export const bio = () => {
       <p className="mt-5">I've had my fair share of experiences, including:</p>
       <ul>
         <li className="ml-3">
-          &#10148; Built backend features at <b>ShopThing</b>🛡️
+          &#10148; Built backend features at <span className="company"><a href="https://www.shopthing.com/"><b>ShopThing</b>🛡️</a></span>
         </li>
         <li className="ml-3">
-          &#10148; Improved API engineering applications at <b>TD Bank</b> ⚙️
+          &#10148; Improved API engineering applications at <span className="company"><a href="https://www.td.com/ca/en/personal-banking"><b>TD Bank</b> ⚙️</a></span>
         </li>
         <li className="ml-3">
-          &#10148; Automated testing at <b>iA Finanical Group</b> 🚀
+          &#10148; Automated testing at <span className="company"><a href="https://ia.ca/individuals"><b>iA Finanical Group</b> 🚀</a></span>
         </li>
       </ul>
       <p className="mb-5">
@@ -87,6 +94,7 @@ export const bio = () => {
           </a>
         </b>
       </p>
+      <style>{styles}</style>
     </div>
   );
 };
