@@ -5,8 +5,7 @@ import {
   ArrowIcon,
   GitHubIcon,
   LinkedInIcon,
-  TwitterIcon,
-  ViewsIcon,
+  EmailIcon,
 } from 'components/icons';
 import { name, about, bio, avatar } from 'lib/info';
 import Footer from './footer';
@@ -44,7 +43,7 @@ export default async function HomePage() {
         />
       </div>
       {bio()}
-      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-500 dark:text-neutral-400">
+      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-lg text-neutral-500 dark:text-neutral-400 justify-center">
         <li>
           <a
             className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
@@ -76,6 +75,17 @@ export default async function HomePage() {
           >
             <ArrowIcon />
             <p className="h-7">see my resume</p>
+          </a>
+        </li>
+        <li>
+          <a
+            className="flex items-center hover:text-neutral-700 dark:hover:text-neutral-200 transition-all"
+            rel="noopener noreferrer"
+            target="_blank"
+            href="mailto:g27ma@Uwaterloo.ca"
+          >
+            <EmailIcon />
+            <p className="h-7">get in contact</p>
           </a>
         </li>
       </ul>

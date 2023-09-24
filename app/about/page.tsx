@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import coke from "../images/coke.jpeg";
-import rcm from "../images/rcm.jpeg";
+import coke from "../images/coke.jpg";
+import rcm from "../images/rcm.jpg";
 import tottenham from "../images/tottenham.jpeg";
-import meal from "../images/meal.jpeg"
+import meal from "../images/meal.jpg"
 import Footer from "../footer"
 import { CSSProperties } from 'react';
 

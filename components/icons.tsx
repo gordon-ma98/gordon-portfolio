@@ -114,3 +114,20 @@ export function LinkedInIcon() {
     </svg>
   );
 }
+
+export function EmailIcon() {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 3H2C0.89543 3 0 3.89543 0 5V15C0 16.1046 0.89543 17 2 17H14C15.1046 17 16 16.1046 16 15V5C16 3.89543 15.1046 3 14 3ZM14 5L8 12L2 5H14ZM2 15V6.26653L8 13.7335L14 6.26653V15H2Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
