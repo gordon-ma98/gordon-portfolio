@@ -66,7 +66,7 @@ export const bio = () => {
         </a>
       </p>
       <p>
-        In addition, during my free time, you'll find me:
+        In addition, you'll find me:
       </p>
       <ul>
         <li className="ml-3">&#10148; Picking up New Instruments 🎸</li>
