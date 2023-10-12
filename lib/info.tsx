@@ -31,7 +31,7 @@ export const avatar = me;
 export const about = () => {
   return (
     <>
-      I'm in my third year of Computer Science at the{" "}
+      I'm in my fourth year of Computer Science at the{" "}
       <b>University of Waterloo</b> and recently completed an internship at{" "}
       <span className="company"><a href="https://www.marketingkitchen.ca/"><b>Marketing Kitchen</b></a></span> where I developed automation projects from
       inception to completion.
