@@ -12,6 +12,7 @@ import chess from "../images/chess.png";
 import sudoku from "../images/sudoku.png";
 import carCreator from "../images/carCreator.png";
 import superchargers from "../images/superchargers.png";
+import quiz from "../images/quiz.jpg";
 
 const styles = `
 @media (max-width: 768px) {
@@ -25,15 +26,18 @@ const styles = `
 }
 `;
 
-const cardStyle: CSSProperties = {
-  display: "flex",
-  border: "1px solid #ddd",
-  borderRadius: "4px",
-  overflow: "hidden",
-  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
-  width: "90%",
-  marginBottom: "20px",
-  transition: "transform 0.3s ease-in-out",
+const generateCardStyle = (isHovered) => {
+  return {
+    display: "flex",
+    border: "1px solid #ddd",
+    borderRadius: "4px",
+    overflow: "hidden",
+    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
+    width: "90%",
+    marginBottom: "20px",
+    transition: "all 0.3s ease-in-out",
+    backgroundColor: isHovered ? "#ededed" : "#fff",
+  };
 };
 
 const imageStyle: CSSProperties = {
@@ -42,6 +46,13 @@ const imageStyle: CSSProperties = {
   padding: "10px",
   objectFit: "cover",
   border: "1px solid #ccc",
+};
+
+const imageTBStyle: CSSProperties = {
+  minWidth: "60%",
+  maxWidth: "60%",
+  padding: "10px",
+  objectFit: "contain",
 };
 
 const titleStyle = {
@@ -79,6 +90,7 @@ export default function BlogPage() {
   const [isHovered2, setIsHovered2] = useState(false);
   const [isHovered3, setIsHovered3] = useState(false);
   const [isHovered4, setIsHovered4] = useState(false);
+  const [isHovered5, setIsHovered5] = useState(false);
 
   const handleMouseEnter1 = () => {
     setIsHovered1(true);
@@ -111,6 +123,20 @@ export default function BlogPage() {
   const handleMouseLeave4 = () => {
     setIsHovered4(false);
   };
+
+  const handleMouseEnter5 = () => {
+    setIsHovered5(true);
+  };
+
+  const handleMouseLeave5 = () => {
+    setIsHovered5(false);
+  };
+
+  const cardStyle1 = generateCardStyle(isHovered1);
+  const cardStyle2 = generateCardStyle(isHovered2);
+  const cardStyle3 = generateCardStyle(isHovered3);
+  const cardStyle4 = generateCardStyle(isHovered4);
+  const cardStyle5 = generateCardStyle(isHovered5);
 
   useEffect(() => {
     // Detect the system's color scheme and update the state accordingly
@@ -155,7 +181,57 @@ export default function BlogPage() {
       <div>
         <div
           className="cards"
-          style={isHovered2 ? { ...cardStyle, ...popAnimation } : cardStyle}
+          style={isHovered5 ? { ...cardStyle5, ...popAnimation } : cardStyle5}
+          onMouseEnter={handleMouseEnter5}
+          onMouseLeave={handleMouseLeave5}
+          onClick={() =>
+            (window.location.href = "https://github.com/gordon-ma98/Quizzler")
+          }
+        >
+          <div style={cardContentStyle}>
+            <h2 style={titleStyle}>Quizzler</h2>
+            <hr style={{ marginBottom: "10px", marginTop: "5px" }}></hr>
+            🔧 :
+            <div style={boxStyles}>
+              <h5>Kotlin</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>Gradle</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>MongoDB</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>Docker</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>JUnit</h5>
+            </div>
+            <div style={boxStyles}>
+              <h5>OpenAI</h5>
+            </div>
+            <hr style={{ marginTop: "10px" }}></hr>
+            <p style={descriptionStyle}>
+              A desktop application designed to enable users to
+              <b> automatically generate exam-style questions</b> based on
+              content within uploaded files. This software encompasses essential
+              functionalities, including quiz-taking capabilities, user account
+              persistence, automated marking, and quiz persistence. Study
+              experiences can be elevated using this <b>AI-based OpenAI</b> tool
+              backed with a variety of question-type options to enhance
+              learning.
+            </p>
+          </div>
+          <Image
+            className="images"
+            src={quiz}
+            alt="quizzler"
+            style={imageTBStyle}
+          />
+        </div>
+        <div
+          className="cards"
+          style={isHovered2 ? { ...cardStyle2, ...popAnimation } : cardStyle2}
           onMouseEnter={handleMouseEnter2}
           onMouseLeave={handleMouseLeave2}
           onClick={() =>
@@ -181,11 +257,11 @@ export default function BlogPage() {
               A novel app emerges as a groundbreaking innovation, empowering
               users to effortlessly transform automotive-themed phrases into
               vivid, imaginative car designs. This remarkable application
-              harnesses the prowess of cutting-edge artificial intelligence and {" "}
-              <b>machine learning NLP technologies</b> by seamlessly implementing advanced{" "}
-              <b>prompt engineering</b> techniques. Furthermore, it utilizes the
-              rich capabilities of the OpenAI Library to craft intricate and
-              imaginative vehicle concepts.
+              harnesses the prowess of cutting-edge artificial intelligence and{" "}
+              <b>machine learning NLP technologies</b> by seamlessly
+              implementing advanced <b>prompt engineering</b> techniques.
+              Furthermore, it utilizes the rich capabilities of the OpenAI
+              Library to craft intricate and imaginative vehicle concepts.
             </p>
           </div>
           <Image
@@ -201,7 +277,7 @@ export default function BlogPage() {
         >
           <div
             className="cards"
-            style={isHovered3 ? { ...cardStyle, ...popAnimation } : cardStyle}
+            style={isHovered3 ? { ...cardStyle3, ...popAnimation } : cardStyle3}
             onMouseEnter={handleMouseEnter3}
             onMouseLeave={handleMouseLeave3}
           >
@@ -236,7 +312,7 @@ export default function BlogPage() {
         </a>
         <div
           className="cards"
-          style={isHovered4 ? { ...cardStyle, ...popAnimation } : cardStyle}
+          style={isHovered4 ? { ...cardStyle4, ...popAnimation } : cardStyle4}
           onMouseEnter={handleMouseEnter4}
           onMouseLeave={handleMouseLeave4}
           onClick={() =>
@@ -256,9 +332,18 @@ export default function BlogPage() {
             </div>
             <hr style={{ marginTop: "10px" }}></hr>
             <p style={descriptionStyle}>
-            The interactive Sudoku game board offers a user-friendly interface for number input and real-time feedback, enhancing the overall gaming experience. It incorporates a powerful solving engine that utilizes <b>dynamic programming principles</b> and the "backtracking algorithm" to efficiently crack even the most complex Sudoku puzzles. 
+              The interactive Sudoku game board offers a user-friendly interface
+              for number input and real-time feedback, enhancing the overall
+              gaming experience. It incorporates a powerful solving engine that
+              utilizes <b>dynamic programming principles</b> and the
+              "backtracking algorithm" to efficiently crack even the most
+              complex Sudoku puzzles.
             </p>
-            <p style={descriptionStyle}>Whether you're a casual player or a Sudoku aficionado, this interface provides a satisfying and educational puzzle-solving experience.</p>
+            <p style={descriptionStyle}>
+              Whether you're a casual player or a Sudoku aficionado, this
+              interface provides a satisfying and educational puzzle-solving
+              experience.
+            </p>
           </div>
           <Image
             className="images"
@@ -269,7 +354,7 @@ export default function BlogPage() {
         </div>
         <div
           className="cards"
-          style={isHovered1 ? { ...cardStyle, ...popAnimation } : cardStyle}
+          style={isHovered1 ? { ...cardStyle1, ...popAnimation } : cardStyle1}
           onMouseEnter={handleMouseEnter1}
           onMouseLeave={handleMouseLeave1}
           onClick={() =>
@@ -303,7 +388,12 @@ export default function BlogPage() {
               was utilized to set up database schemas and Passport.js was
               incorporated for secure authentication middleware.
             </p>
-            <p style={descriptionStyle}>This project is on my <b>upcoming agenda</b>, aiming to enable users to easily navigate a map and locate their preferred <i>Tesla Supercharger</i> station as they scroll through the interface.</p>
+            <p style={descriptionStyle}>
+              This project is on my <b>upcoming agenda</b>, aiming to enable
+              users to easily navigate a map and locate their preferred{" "}
+              <i>Tesla Supercharger</i> station as they scroll through the
+              interface.
+            </p>
           </div>
           <Image
             className="images"

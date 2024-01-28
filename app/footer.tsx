@@ -50,7 +50,7 @@ function Footer() {
   return (
     <footer style={{ ...footerStyle, display: showFooter ? "block" : "none" }}>
       Made with <span style={{ color: "red" }}>&#9829;</span> by Gordon. Last
-      Updated Sept 2023.
+      Updated Jan 2024.
     </footer>
   );
 }

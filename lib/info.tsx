@@ -32,8 +32,8 @@ export const about = () => {
   return (
     <>
       I'm in my fourth year of Computer Science at the{" "}
-      <b>University of Waterloo</b> and recently completed an internship at{" "}
-      <span className="company"><a href="https://www.marketingkitchen.ca/"><b>Marketing Kitchen</b></a></span> where I developed automation projects from
+      <b>University of Waterloo</b> and recently completing an internship at{" "}
+      <span className="company"><a href="https://www.tiktok.com/about?lang=en"><b>TikTok</b></a></span> where I am developing testing software for their Trust and Safety project from
       inception to completion.
     </>
   );
@@ -43,6 +43,9 @@ export const bio = () => {
     <div>
       <p className="mt-5">I've had my fair share of experiences, including:</p>
       <ul>
+        <li className="ml-3">
+         &#10148; Developed complete automation projects <span className="company"><a href="https://www.marketingkitchen.ca/"><b>Marketing Kitchen</b>💡</a></span>
+        </li>
         <li className="ml-3">
           &#10148; Built backend features at <span className="company"><a href="https://www.shopthing.com/"><b>ShopThing</b>🛡️</a></span>
         </li>
