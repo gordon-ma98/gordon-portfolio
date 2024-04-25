@@ -26,17 +26,20 @@ const styles = `
 }
 `;
 
-const generateCardStyle = (isHovered) => {
+const generateCardStyle = (isHovered, isDarkMode) => {
+  const baseBackgroundColor = isDarkMode ? "#333" : "#fff";
+  const hoverBackgroundColor = isDarkMode ? "#000" : "#ededed";
+
   return {
     display: "flex",
-    border: "1px solid #ddd",
+    border: `1px solid ${isDarkMode ? "#555" : "#ddd"}`,
     borderRadius: "4px",
     overflow: "hidden",
     boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)",
     width: "90%",
     marginBottom: "20px",
     transition: "all 0.3s ease-in-out",
-    backgroundColor: isHovered ? "#ededed" : "#fff",
+    backgroundColor: isHovered ? hoverBackgroundColor : baseBackgroundColor,
   };
 };
 
@@ -132,11 +135,11 @@ export default function BlogPage() {
     setIsHovered5(false);
   };
 
-  const cardStyle1 = generateCardStyle(isHovered1);
-  const cardStyle2 = generateCardStyle(isHovered2);
-  const cardStyle3 = generateCardStyle(isHovered3);
-  const cardStyle4 = generateCardStyle(isHovered4);
-  const cardStyle5 = generateCardStyle(isHovered5);
+  const cardStyle1 = generateCardStyle(isHovered1, !isLightMode);
+  const cardStyle2 = generateCardStyle(isHovered2, !isLightMode);
+  const cardStyle3 = generateCardStyle(isHovered3, !isLightMode);
+  const cardStyle4 = generateCardStyle(isHovered4, !isLightMode);
+  const cardStyle5 = generateCardStyle(isHovered5, !isLightMode);
 
   useEffect(() => {
     // Detect the system's color scheme and update the state accordingly

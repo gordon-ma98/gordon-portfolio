@@ -28,7 +28,7 @@ export default async function HomePage() {
   return (
     <section>
       {name()}
-      <p className="my-5 max-w-[650px] text-neutral-800 dark:text-neutral-200">
+      <p className="my-5 max-w-[650px] text-neutral-800 dark:text-neutral-200" style={{ fontSize: '1.1rem' }}>
         {about()}
       </p>
       <div className="flex mb-5 max-w-[650px] flex-col md:flex-row justify-center items-center">
