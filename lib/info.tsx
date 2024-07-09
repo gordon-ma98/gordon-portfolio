@@ -57,7 +57,7 @@ export const bio = () => {
       <p className="mt-5">I've had my fair share of experiences, including:</p>
       <ul>
         <li className="ml-3">
-          &#10148; Developed complete automation projects{" "}
+          &#10148; Developed complete automation projects from scratch at{" "}
           <span className="company">
             <a href="https://www.marketingkitchen.ca/">
               <b>Marketing Kitchen</b>💡
