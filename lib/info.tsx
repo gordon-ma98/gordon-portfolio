@@ -46,7 +46,7 @@ export const about = () => {
         </b>
         </a>
       </span>{" "}
-      where I am developing testing software for Trust and Safety projects from
+      where I am developing backend software for Trust and Safety projects from
       inception.
     </>
   );
